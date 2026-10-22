@@ -26,7 +26,7 @@ lsgd=results.loc[results.optimizer=='L-SGD'].iloc[0]
 col1,col2,col3=st.columns(3)
 col1.metric('Highest recorded accuracy',f'{best.accuracy_pct:.2f}%',best.optimizer)
 col2.metric('L-SGD recorded accuracy',f'{lsgd.accuracy_pct:.2f}%')
-col3.metric('Training subset',f'{int(results.train_samples.iloc[0]):,} images','20% of MNIST train split')
+col3.metric('Training subset',f'{int(results['train_samples'].iloc[0]):,} images','20% of MNIST train split')
 
 st.subheader('Recorded optimizer comparison')
 chart_metric=st.radio('Chart metric',['Test accuracy (%)','Training time (seconds)'],horizontal=True)

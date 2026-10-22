@@ -26,6 +26,10 @@ The notebook says MNIST in its code and downloads `torchvision.datasets.MNIST`; 
 
 The original notebook also contains a chart that derives an *estimated accuracy trend* from training loss rather than measured per-epoch accuracy. That chart is not used in this dashboard or included in the recorded metrics.
 
+## Live dashboard
+
+Open the interactive Streamlit app: https://mnist-optimizer-benchmark-8dcvdfbziwssesw9vybgzf.streamlit.app/
+
 ## Run the dashboard locally
 
 ```bash
