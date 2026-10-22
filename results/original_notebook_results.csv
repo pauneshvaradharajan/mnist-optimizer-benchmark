@@ -1,0 +1,10 @@
+optimizer,accuracy_pct,training_time_s,rss_change_mb,source
+SGD,91.28,125.62,114.11,saved output in supplied semester notebook
+SGD+Momentum,95.84,125.4,,saved output in supplied semester notebook
+SGD+Nesterov,96.41,127.54,,saved output in supplied semester notebook
+Adam,97.83,138.85,,saved output in supplied semester notebook
+RMSprop,98.4,131.27,,saved output in supplied semester notebook
+Adagrad,97.96,130.07,,saved output in supplied semester notebook
+Adadelta,97.98,137.06,,saved output in supplied semester notebook
+AdamW,97.92,134.58,,saved output in supplied semester notebook
+L-SGD,92.03,159.69,18.54,saved output in supplied semester notebook
