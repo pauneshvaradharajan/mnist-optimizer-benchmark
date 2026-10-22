@@ -33,7 +33,7 @@ chart_metric=st.radio('Chart metric',['Test accuracy (%)','Training time (second
 chart=shown.set_index('optimizer')[['accuracy_pct' if chart_metric.startswith('Test') else 'training_time_s']]
 chart.columns=[chart_metric]
 st.bar_chart(chart,color='#285F8F')
-st.dataframe(shown[['optimizer','accuracy_pct','training_time_s','rss_change_mb']].rename(columns={'optimizer':'Optimizer','accuracy_pct':'Test accuracy (%)','training_time_s':'Training time (s)','rss_change_mb':'Process RSS change (MB; two runs only)'}),hide_index=True,use_container_width=True)
+st.dataframe(shown[['optimizer','accuracy_pct','training_time_s','rss_change_mb']].rename(columns={'optimizer':'Optimizer','accuracy_pct':'Test accuracy (%)','training_time_s':'Training time (s)','rss_change_mb':'Process RSS change (MB; two runs only)'}),hide_index=True,width="stretch")
 
 with st.expander('Training loss by epoch'):
     loss_view=losses[losses.optimizer.isin(shown.optimizer)]
@@ -48,3 +48,4 @@ st.subheader('Run a reproducible experiment')
 st.code('pip install -r requirements-training.txt\npython src/train.py --epochs 5 --subset-fraction 0.2 --seed 42',language='bash')
 st.download_button('Download recorded notebook metrics',results.to_csv(index=False).encode('utf-8'),'original_notebook_results.csv','text/csv')
 st.markdown('Source notebook is archived in the GitHub repository. See the README for methodology, caveats, and reproduction steps.')
+
